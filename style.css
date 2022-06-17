@@ -1,0 +1,147 @@
+* {
+  font-family: 'League Spartan', sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: hsl(222, 26%, 31%);
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+#calculator {
+  margin: auto;
+  height: 60%;
+  width: 500px;
+  padding-top: 50px;
+  /* background-color: green; */
+}
+
+#screen {
+  background-color: hsl(224, 36%, 15%);
+  width: 100%;
+  height: 110px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+#screen-text {
+  color: white;
+  float: right;
+  font-size: 50px;
+  margin-right: 25px;
+  line-height: 110px;
+}
+
+h1 {
+  color: white;
+}
+
+#keyboard {
+  background-color: hsl(223, 31%, 20%);
+  width: 90%;
+  height: 400px;
+  padding: 5%;
+  border-radius: 10px;
+  margin-top: 30px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+#keyboard div {
+  border-radius: 10px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#seven {
+  grid-column: 1;
+  grid-row: 1;
+}
+#eight {
+  grid-column: 2;
+  grid-row: 1;
+}
+#nine {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#del {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+#four {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#five {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#point {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+#zero {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+#divide {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+#multiply {
+  grid-column: 4;
+  grid-row: 4;
+}
+
+#reset {
+  grid-row: 5;
+  grid-column: span 2;
+}
+
+#equal {
+  grid-row: 5;
+  grid-column: span 2;
+}
+
+.normal-btn {
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: 0px 5px hsl(28, 16%, 65%);
+  color: hsl(221, 14%, 31%);
+}
+
+.blue-btn {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0px 5px hsl(224, 28%, 35%);
+  color: white;
+}
+
+.red-btn {
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 0px 5px hsl(6, 70%, 34%);
+  color: white;
+}
