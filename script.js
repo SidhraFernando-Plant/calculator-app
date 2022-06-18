@@ -34,6 +34,19 @@ function equals() {
   screenTxtNode.innerText = result;
 }
 
+function reset() {
+  let screenTxtNode = document.getElementById('screen-text');
+  screenTxtNode.innerText = '0';
+  operand1 = undefined;
+  operand2 = undefined;
+  operation = undefined;
+}
+
+function del() {
+  let screenTxtNode = document.getElementById('screen-text');
+  screenTxtNode.innerText = '0';
+}
+
 let numberKeyNodes = document.querySelectorAll('.number-btn');
 numberKeyNodes.forEach((key) =>
   key.addEventListener('click', () => typeNumber(key.textContent))
@@ -46,3 +59,9 @@ opKeyNodes.forEach((key) =>
 
 let equalKey = document.getElementById('equal');
 equalKey.addEventListener('click', equals);
+
+let delKey = document.getElementById('del');
+delKey.addEventListener('click', del);
+
+let resetKey = document.getElementById('reset');
+resetKey.addEventListener('click', reset);
