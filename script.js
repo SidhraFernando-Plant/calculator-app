@@ -18,6 +18,22 @@ function typeOperation(op) {
   operation = op;
 }
 
+function equals() {
+  let screenTxtNode = document.getElementById('screen-text');
+  operand2 = parseInt(screenTxtNode.innerText);
+  let result;
+  if (operation === '+') {
+    result = operand1 + operand2;
+  } else if (operation === '-') {
+    result = operand1 - operand2;
+  } else if (operation === '/') {
+    result = Math.round(operand1 / operand2);
+  } else {
+    result = operand1 * operand2;
+  }
+  screenTxtNode.innerText = result;
+}
+
 let numberKeyNodes = document.querySelectorAll('.number-btn');
 numberKeyNodes.forEach((key) =>
   key.addEventListener('click', () => typeNumber(key.textContent))
@@ -27,3 +43,6 @@ let opKeyNodes = document.querySelectorAll('.op-btn');
 opKeyNodes.forEach((key) =>
   key.addEventListener('click', () => typeOperation(key.textContent))
 );
+
+let equalKey = document.getElementById('equal');
+equalKey.addEventListener('click', equals);
